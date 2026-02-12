@@ -208,10 +208,12 @@ button:hover {
 }
 
 .contact-item i {
-    color: #00f2fe;
+    color: #00ffff;
     width: 25px;
     text-align: center;
     font-size: 1.2rem;
+    margin-right: 15px;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .contact-item:hover {
@@ -265,3 +267,4 @@ button:hover {
     }
 
 }
+
