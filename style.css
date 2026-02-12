@@ -251,6 +251,33 @@ button:hover {
     box-shadow: 0 0 20px #00ffff;
 }
 
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #001a1a 0%, #000000 100%);
+    overflow: hidden;
+}
+
+.animated-bg::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(circle, #00ffff 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.5;
+    animation: move-bg 20s linear infinite;
+}
+
+@keyframes move-bg {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-50px, -50px); }
+}
+
 @media (max-width: 600px) {
     .card {
         width: 85%;
